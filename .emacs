@@ -52,7 +52,18 @@
 (load-theme 'tango-plus)
 
 (set-default-font "Inconsolata-11")
-(global-linum-mode t)
+
+;; line numbers
+(defun goto-line-x (orig-goto-line)
+  "display line number on interactive goto-line"
+  (interactive)
+  (unwind-protect
+      (progn
+        (linum-mode 1)
+        (call-interactively orig-goto-line))
+    (linum-mode -1)))
+
+(advice-add 'goto-line :around #'goto-line-x)
 
 ;;window move
 (global-set-key [(control tab)] 'other-window)
