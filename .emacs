@@ -149,6 +149,7 @@
 
 ;; whitespace
 (setq-default indent-tabs-mode nil)
+(setq whitespace-global-modes '(not erc-mode))
 
 (use-package whitespace
   :init   (setq whitespace-style
