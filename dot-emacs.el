@@ -149,11 +149,13 @@
 
 ;; whitespace
 (setq-default indent-tabs-mode nil)
-(setq whitespace-global-modes '(not erc-mode))
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (use-package whitespace
-  :init   (setq whitespace-style
-                '(trailing newline-mark newline tabs tab-mark face))
+  :init   (setq
+           whitespace-style            '(trailing newline-mark newline tabs tab-mark face)
+           whitespace-display-mappings '((newline-mark 10 [8629 10]))
+           whitespace-global-modes     '(not erc-mode))
   :config (global-whitespace-mode))
 
 (defun untabify-x (orig-untabify)
