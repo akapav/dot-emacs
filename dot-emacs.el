@@ -153,8 +153,7 @@
 
 (use-package whitespace
   :init   (setq
-           whitespace-style            '(trailing newline-mark newline tabs tab-mark face)
-           whitespace-display-mappings '((newline-mark 10 [8629 10]))
+           whitespace-style            '(trailing tabs tab-mark face)
            whitespace-global-modes     '(not erc-mode))
   :config (global-whitespace-mode))
 
