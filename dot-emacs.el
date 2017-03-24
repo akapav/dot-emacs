@@ -164,6 +164,20 @@
 
 (advice-add 'untabify :around #'untabify-x)
 
+;; eighty column rule
+(use-package column-marker
+  :init   (setq cm80-is-active nil)
+  :config (global-set-key [?\C-c ?m] 'col80-toggle))
+
+(defun col80-toggle nil
+  "toggle eighty column marker"
+  (interactive)
+  (make-variable-buffer-local 'cm80-is-active)
+  (if cm80-is-active
+      (column-marker-1 -40)
+    (column-marker-1 80))
+  (setq cm80-is-active (not cm80-is-active)))
+
 ;; org-mode
 (use-package org
   :bind (("C-c l" . org-store-link)

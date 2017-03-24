@@ -10,4 +10,5 @@
   company
   smex
   window-number
-  use-package)
+  use-package
+  column-marker)
