@@ -122,9 +122,6 @@
 ;; editing
 (delete-selection-mode 1)
 
-;; undo
-(global-undo-tree-mode)
-
 ;; global modes
 (which-key-mode t)
 
