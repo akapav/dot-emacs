@@ -1,7 +1,6 @@
 ;; packages required by .emacs
 
-'(undo-tree
-  browse-kill-ring
+'(browse-kill-ring
   flycheck
   magit
   tango-plus-theme

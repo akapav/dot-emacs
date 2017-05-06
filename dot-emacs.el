@@ -154,7 +154,7 @@
            whitespace-global-modes     '(not erc-mode))
   :config (global-whitespace-mode))
 
-(defun untabify-x (orig-untabify)
+(defun untabify-x (orig-untabify &rest -)
   "Untabify region or line"
   (interactive)
   (apply-region-or-line orig-untabify))
