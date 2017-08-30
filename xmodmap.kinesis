@@ -1,0 +1,42 @@
+keycode 117 = Mode_switch
+!keysym h = h H Left
+!keysym j = j J Down
+!keysym k = k K Up
+!keycode 46 = l L Right
+
+! keycode 113 = bracketleft braceleft
+! keycode 114 = bracketright braceright
+keycode 111 = Down
+keycode 116 = Up
+
+! keycode 34  = Up
+! keycode 35  = Right
+
+keycode 110 = Escape
+keycode 112 = Escape
+keycode 119 = Shift_L
+keycode 66  = Select
+
+remove Mod4 = Super_R
+keycode 134 = Alt_R
+
+keycode 115 = Super_L
+
+!remove Mod4 = Alt_R
+add Mod1 = Alt_R
+clear Lock
+
+keysym o = o O ccaron Ccaron
+keysym p  = p P cacute Cacute
+keycode 47 = semicolon colon dstroke Dstroke
+keycode 60 = period greater scaron Scaron
+keycode 61 = slash question zcaron Zcaron
+
+keysym 3 = 3 numbersign less
+keysym 4 = 4 dollar greater
+keysym e = e E braceleft
+keysym r = r R braceright
+keysym d = d D parenleft
+keysym f = f F parenright
+keysym c = c C bracketleft
+keysym v = v V bracketright
